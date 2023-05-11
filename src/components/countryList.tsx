@@ -1,19 +1,17 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {FlatList, StyleSheet, View, Text} from 'react-native';
 
 import {CountryListProps, CountryObject} from '../types';
 
 const CountryItem = (data: CountryObject) => (
   <View style={styles.rowContainer}>
-    <Text>
+    <Text style={styles.countryText}>
       {data.State} : (${data.Population})
     </Text>
   </View>
 );
 
 export const CountryList = (props: CountryListProps) => {
-  console.log('props ', props);
-
   return (
     <FlatList
       style={{flex: 1}}
@@ -27,7 +25,13 @@ export const CountryList = (props: CountryListProps) => {
 
 const styles = StyleSheet.create({
   rowContainer: {
-    height: 40,
+    height: 50,
     borderBottomWidth: 1,
+    paddingHorizontal: 5,
+    justifyContent: 'center',
+  },
+  countryText: {
+    fontSize: 16,
+    color: 'black',
   },
 });

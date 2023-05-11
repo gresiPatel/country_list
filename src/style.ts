@@ -20,4 +20,5 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     marginVertical: 5,
   },
+  statusText: {marginVertical: 5, textAlign: 'center', color: 'black'},
 });
